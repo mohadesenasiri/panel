@@ -177,6 +177,14 @@ body {
     outline: none;
 }
 
+/* Textarea specific styling */
+.custom-input-group textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
 .custom-input-group .form-control::placeholder {
     color: var(--secondary-color);
     opacity: 0.7;
@@ -200,7 +208,6 @@ body {
 
 .input-icon {
     position: absolute;
-    right: 12px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
@@ -209,6 +216,17 @@ body {
     z-index: 10;
     width: 20px;
     height: 20px;
+}
+
+/* Right-aligned icons (default) */
+.input-icon.right {
+    right: 12px;
+}
+
+/* Left-aligned icons */
+.input-icon.left {
+    left: 12px;
+    right: auto;
 }
 
 /* Button styling */
@@ -395,7 +413,6 @@ form {
     
     .registration-form {
         margin: var(--spacer-4);
-        box-shadow: var(--shadow);
         padding: var(--spacer-6);
         max-height: calc(100vh - 2 * var(--spacer-4));
     }
